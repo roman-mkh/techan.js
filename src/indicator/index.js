@@ -9,7 +9,8 @@ module.exports = function(d3) {
       atr = require('./atr')(indicatorMixin, accessor.ohlc, sma),
       circularbuffer = require('../util')().circularbuffer,
       sroc_init = require('./sroc'),
-      vwap = require('./vwap')(indicatorMixin, accessor.ohlc);
+      vwap = require('./vwap')(indicatorMixin, accessor.ohlc),
+      momentum = require('./momentum')(indicatorMixin, accessor.ohlc);
 
   return {
     atr: atr,
@@ -28,7 +29,8 @@ module.exports = function(d3) {
     williams: require('./williams')(indicatorMixin, accessor.ohlc, ema),
     adx: require('./adx')(d3.max, indicatorMixin, accessor.ohlc, ema),
     bollinger: require('./bollinger')(indicatorMixin, accessor.ohlc, sma),
-    vwap: vwap
+    vwap: vwap,
+    momentum: momentum
    };
 };
 

@@ -138,6 +138,14 @@ function techanSpec(techan) {
       expect(techan.indicator.wilderma()).toBeDefined();
     });
 
+    it('Then techan.indicator.momentum should be defined', function () {
+      expect(techan.indicator.momentum).toBeDefined();
+    });
+
+    it('Then techan.indicator.momentum can be constructed', function () {
+      expect(techan.indicator.momentum()).toBeDefined();
+    });
+
     it('Then techan.plot should be defined', function () {
       expect(techan.plot).toBeDefined();
     });
